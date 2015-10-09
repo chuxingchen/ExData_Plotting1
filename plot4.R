@@ -23,7 +23,6 @@ subPowerData <- PowerData[PowerData$Date =="2007-02-01" | PowerData$Date =="2007
 
 # Creating 4 panels
 
-dev.copy(png, file = "./plot4.png", width=480, height=480) 
 
 par(mfrow=c(2,2))
 
@@ -31,7 +30,7 @@ par(mfrow=c(2,2))
 # Panel 1
 
 plot(subPowerData$Time, subPowerData$Global_active_power, type="l", xlab="", 
-	ylab="Global Active Power(kilowatts)", cex.lab=0.7)
+	ylab="Global Active Power", cex.lab=0.7)
 
 
 #Panel 2
@@ -56,11 +55,13 @@ legend("topright",
 
 #panel 4
 
-plot(subPowerData$Time, subPowerData$Global_active_power, type="l", xlab="datetime", 
-	ylab="Voltage", cex.lab=0.7)
+plot(subPowerData$Time, subPowerData$Global_reactive_power, type="l", xlab="datetime", 
+	ylab="Global Reactive Power", cex.lab=0.7)
 
 
 
 # Saving plot4 to png format on local drive
+
+dev.copy(png, file = "./plot4.png", width=480, height=480) 
 
 dev.off() 
