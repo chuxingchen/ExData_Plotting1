@@ -4,8 +4,7 @@ This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>, a popular repository for machine learning
 datasets. In particular, we will be using the "Individual household
-electric power consumption Data Set" which I have made available on
-the course web site:
+electric power consumption Data Set" :
 
 
 * <b>Dataset</b>: <a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> [20Mb]
@@ -36,10 +35,7 @@ web site</a>:
 ## Loading the data
 
 
-
-
-
-When loading the dataset into R, please consider the following:
+When loading the dataset into R, the following points were considered:
 
 * The dataset has 2,075,259 rows and 9 columns. First
 calculate a rough estimate of how much memory the dataset will require
@@ -51,64 +47,52 @@ memory (most modern computers should be fine).
 rather than reading in the entire dataset and subsetting to those
 dates.
 
-* You may find it useful to convert the Date and Time variables to
-Date/Time classes in R using the `strptime()` and `as.Date()`
-functions.
-
 * Note that in this dataset missing values are coded as `?`.
 
 
 ## Making Plots
 
 Our overall goal here is simply to examine how household energy usage
-varies over a 2-day period in February, 2007. Your task is to
+varies over a 2-day period in February, 2007. My task was to
 reconstruct the following plots below, all of which were constructed
 using the base plotting system.
 
-First you will need to fork and clone the following GitHub repository:
-[https://github.com/rdpeng/ExData_Plotting1](https://github.com/rdpeng/ExData_Plotting1)
 
-
-For each plot you should
+For each plot
 
 * Construct the plot and save it to a PNG file with a width of 480
 pixels and a height of 480 pixels.
 
 * Name each of the plot files as `plot1.png`, `plot2.png`, etc.
 
-* Create a separate R code file (`plot1.R`, `plot2.R`, etc.) that
-constructs the corresponding plot, i.e. code in `plot1.R` constructs
-the `plot1.png` plot. Your code file **should include code for reading
-the data** so that the plot can be fully reproduced. You should also
-include the code that creates the PNG file.
-
-* Add the PNG file and R code file to your git repository
-
-When you are finished with the assignment, push your git repository to
-GitHub so that the GitHub version of your repository is up to
-date. There should be four PNG files and four R code files.
+* Separate R code files (`plot1.R`, `plot2.R`, etc.) that
+construct the corresponding plots, i.e. code in `plot1.R` constructs
+the `plot1.png` plot, are inlcuded in this repository.
 
 
-The four plots that you will need to construct are shown below. 
+
+The four plots completed are shown below. 
 
 
 ### Plot 1
 
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+![plot 1](./plot1.png) 
 
 
 ### Plot 2
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+![plot 2](./plot2.png)  
 
 
 ### Plot 3
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot 2](./plot2.png) 
 
 
 ### Plot 4
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot 4](./plot4.png) 
+
+
 
