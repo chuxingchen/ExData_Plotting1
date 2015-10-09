@@ -19,30 +19,31 @@ PowerData$Time <- as.POSIXct(paste(PowerData$Date, PowerData$Time), format="%Y-%
 subPowerData <- PowerData[PowerData$Date =="2007-02-01" | PowerData$Date =="2007-02-02", ]
 
 
-
-# Generating Plot4 on screen first
+# Generating plots on screen first
 
 # Creating 4 panels
+
+dev.copy(png, file = "./plot4.png", width=480, height=480) 
 
 par(mfrow=c(2,2))
 
 
 # Panel 1
 
-plot(subPowerData$Time, subPowerData$Global_active_power, type="l", xlab="datetime", 
-	ylab="Global Active Power(kilowatts)")
+plot(subPowerData$Time, subPowerData$Global_active_power, type="l", xlab="", 
+	ylab="Global Active Power(kilowatts)", cex.lab=0.7)
 
 
 #Panel 2
 
-plot(subPowerData$Time, subPowerData$Voltage, type="l", xlab="", 
-	ylab="Voltage")
+plot(subPowerData$Time, subPowerData$Voltage, type="l", xlab="datetime",
+	ylab="Voltage", cex.lab=0.7)
 
 
 #panel 3
 
 plot(subPowerData$Time, subPowerData$Sub_metering_1, type="l", col="black", xlab="", 
-	ylab="Energy sub metering")
+	ylab="Energy sub metering", cex.lab=0.7)
 
 lines(subPowerData$Time, subPowerData$Sub_metering_2, col="red")
 lines(subPowerData$Time, subPowerData$Sub_metering_3, col="blue")
@@ -50,18 +51,16 @@ lines(subPowerData$Time, subPowerData$Sub_metering_3, col="blue")
 legend("topright",
            col=c("black", "red", "blue"),
            c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-           lty=1)
+           lty=1, bty="n", cex=0.7)
 
 
 #panel 4
 
 plot(subPowerData$Time, subPowerData$Global_active_power, type="l", xlab="datetime", 
-	ylab="Voltage")
+	ylab="Voltage", cex.lab=0.7)
 
 
-#
+
 # Saving plot4 to png format on local drive
-
-dev.copy(png, file = "./plot4.png", width=480, height=480) 
 
 dev.off() 
