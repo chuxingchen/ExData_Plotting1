@@ -84,7 +84,7 @@ The four plots completed are shown below.
 
 ### Plot 3
 
-![plot 2](./plot2.png) 
+![plot 3](./plot3.png) 
 
 
 ### Plot 4
